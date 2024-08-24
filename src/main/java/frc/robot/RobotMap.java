@@ -172,7 +172,7 @@ public class RobotMap {
 
         public static final InvertedValue MASTER_INVERT = InvertedValue.Clockwise_Positive;
 
-        public static final int PROX_SENSOR_ID = 3;
+        public static final int PROX_SENSOR_ID = 2;
 
         public static final boolean INDEXER_INVERT = true;
 
@@ -196,7 +196,7 @@ public class RobotMap {
 
     public static final class Pivot {
         public static final int MASTER_ID = 24;
-        public static final int LIMIT_SWITCH_ID = 2;
+        public static final int LIMIT_SWITCH_ID = 4;
         public static final int CAN_CODER_ID = 30;
 
         public static final double CAN_CODER_OFFSET = 0.032717;

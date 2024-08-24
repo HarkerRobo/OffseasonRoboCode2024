@@ -47,8 +47,7 @@ public class OI {
     }
 
     private void initBindings() {
-        driver.getRightBumper().onTrue(CommandGroups.getFullShootSpeaker());
-        driver.getLeftBumper().onTrue(CommandGroups.getFullIntakeCommand());
+        driver.getRightBumper().onTrue(CommandGroups.getFullIntakeCommand());
         driver.getDownDPadButton().onTrue(CommandGroups.getFullZeroCommand());
         driver.getUpDPadButton().whileTrue(new OuttakeStuckNote());
 
@@ -59,7 +58,6 @@ public class OI {
         operator.getButtonY().onTrue(CommandGroups.getFullClimb());
         operator.getButtonA().whileTrue(new MoveToPosition(0));
         operator.getLeftBumper().onTrue(CommandGroups.getFullZeroCommand());
-        // operator.getRightBumper().onTrue(CommandGroups.getFullShootAmp());
         
         driver.getRightDPadButton().onTrue(new PivotToAngle(Goal.SPEAKER));
         driver.getLeftDPadButton().onTrue(new PivotToAngle(Goal.AMP));
