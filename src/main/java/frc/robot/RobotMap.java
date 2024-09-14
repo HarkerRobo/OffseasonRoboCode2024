@@ -53,7 +53,7 @@ public class RobotMap {
         public static final int[] TRANSLATION_IDS = {22, 5, 28, 10};
 
         // translation motors inverted
-        public static final InvertedValue[] TRANSLATION_INVERTS = (FIRST_BOT) ? new InvertedValue[]{InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive}
+        public static final InvertedValue[] TRANSLATION_INVERTS = (FIRST_BOT) ? new InvertedValue[]{InvertedValue.CounterClockwise_Positive, InvertedValue.Clockwise_Positive, InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive}
                                                                               : new InvertedValue[]{InvertedValue.Clockwise_Positive, InvertedValue.Clockwise_Positive, InvertedValue.Clockwise_Positive, InvertedValue.Clockwise_Positive};
 
         // ids for rotation motors
@@ -66,7 +66,7 @@ public class RobotMap {
         public static final int[] CAN_CODER_ID = {9, 10, 11, 12};
 
         // offsets of cancoders of each swerve module (in rotations)
-        public static final double[] CAN_CODER_OFFSETS = (FIRST_BOT) ? new double[]{-0.155518, -0.069092, -0.360596-0.299805, -0.402588-0.193848}
+        public static final double[] CAN_CODER_OFFSETS = (FIRST_BOT) ? new double[]{-0.155518, 0.099609, -0.360596-0.299805, -0.402588-0.193848}
                                                                      : new double[]{-0.141357+0.5, -0.115479+0.5, 0.099609, -0.030518};
         // current limit constants for translation motors
         public static final double TRANS_CURRENT_LIMIT = 40;
@@ -108,12 +108,12 @@ public class RobotMap {
         // Pigeon ID
         public static final int PIGEON_ID = 1;
 
-        public static final double PIGEON_kP = 0.00015; // TODO
+        public static final double PIGEON_kP = 0.0001; // TODO
 
         public static final double MIN_OUTPUT = 0.05;
 
         // PID for omega (turning) control
-        public static final double OMEGA_kP = 10; // TODO
+        public static final double OMEGA_kP = 2; // TODO
         public static final double OMEGA_kI = 0.0;
         public static final double OMEGA_kD = 0.1;
         public static final double MAX_ERROR_SPEAKER = Math.toRadians(5);
@@ -133,8 +133,8 @@ public class RobotMap {
         public static final double VERTICAL_DEG_STAGE = 10;
         
         // Robot Dimensions
-        public static final double ROBOT_LENGTH = Units.inchesToMeters(22.75);
-        public static final double ROBOT_WIDTH = Units.inchesToMeters(22.75);
+        public static final double ROBOT_LENGTH = Units.inchesToMeters(28.5);
+        public static final double ROBOT_WIDTH = Units.inchesToMeters(28.5);
 
         public static final double MAX_DRIVING_SPEED = 5.0; // m/s //TODO
         public static final double EXTENDED_MAX_DRIVING_SPEED = 0.3;

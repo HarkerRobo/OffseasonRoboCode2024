@@ -47,7 +47,8 @@ public class OI {
     }
 
     private void initBindings() {
-        driver.getRightBumper().onTrue(CommandGroups.getFullIntakeCommand());
+        driver.getLeftBumper().onTrue(CommandGroups.getFullIntakeCommand());
+        driver.getRightBumper().onTrue(CommandGroups.getFullShootSpeaker());
         driver.getDownDPadButton().onTrue(CommandGroups.getFullZeroCommand());
         driver.getUpDPadButton().whileTrue(new OuttakeStuckNote());
 
@@ -64,6 +65,8 @@ public class OI {
         driver.getButtonStart().onTrue(new InstantCommand(() -> {
             Drivetrain.getInstance().toggleRobotCentric();
         }));
+        
+        // DURING TESTING: ALIGN ROBOT BOTTOM RIGHT CORNER WITH CORNER OF SUBWOOFER, WITH SHOOTER FACING SPEAKER
         driver.getButtonX().onTrue(new InstantCommand( () -> Drivetrain.getInstance().setPose(new Pose2d(1.28, 5.41, Rotation2d.fromDegrees(180)))));
 
         //TESTING

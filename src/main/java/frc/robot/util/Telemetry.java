@@ -101,8 +101,9 @@ public class Telemetry {
     }
 
     public void odometry() {
-        // NetworkTableEntry rotation = _odometry.getEntry("Rotation");
-        // rotation.setDouble(drive.getRotation().getDegrees());
+        NetworkTableEntry rotation = _odometry.getEntry("Rotation");
+        rotation.setDouble(drive.getRotation().getDegrees());
+        
         Pose2d visionPose = Limelight.getBotPose2d();
         NetworkTableEntry isPoseNear = _odometry.getEntry("Pose Nearness");
         isPoseNear.setBoolean(drive.isPoseNear());
@@ -121,6 +122,9 @@ public class Telemetry {
 
         NetworkTableEntry refSpeakerDeg = _odometry.getEntry("Speaker Align Ref in Deg");
         refSpeakerDeg.setDouble(drive.getRefAngleSpeaker());
+
+        NetworkTableEntry poseRotation = _odometry.getEntry("Pose Rotation in Deg");
+        poseRotation.setDouble(drive.getPoseEstimatorPose2d().getRotation().getDegrees());
     }
 
     public void debug() {
@@ -286,6 +290,9 @@ public class Telemetry {
 
         NetworkTableEntry distance = _limelight.getEntry("Distance To Speaker");
         distance.setDouble(drive.getDistanceToSpeaker());
+
+        NetworkTableEntry aligned = _limelight.getEntry("Aligned to Speaker");
+        aligned.setBoolean(drive.alignedToSpeaker());
 
     }
 

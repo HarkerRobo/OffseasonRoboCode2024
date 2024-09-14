@@ -69,7 +69,7 @@ public class Drivetrain extends SubsystemBase {
 
     public static PIDController omegaAmpController = new PIDController(RobotMap.Drivetrain.OMEGA_AMP_KP, 0, 0);
     // Standard deviations of pose estimate (x, y, heading)
-    private static Matrix<N3, N1> stateStdDevs = VecBuilder.fill(0.2, 0.2, 0.1); // increase to trust encoder (state)
+    private static Matrix<N3, N1> stateStdDevs = VecBuilder.fill(0.1, 0.1, 0.05); // increase to trust encoder (state)
                                                                                         // measurements less
     private static Matrix<N3, N1> visionStdDevs = VecBuilder.fill(0.5, 0.5, 0.5); // increase to trust vsion
                                                                                         // measurements less
@@ -217,6 +217,7 @@ public class Drivetrain extends SubsystemBase {
      * @return heading of pigeon as a Rotation2d
      */
     public Rotation2d getRotation() {
+        System.out.println(pigeon.getRotation2d());
         return pigeon.getRotation2d();
     }
 
@@ -253,6 +254,7 @@ public class Drivetrain extends SubsystemBase {
      * @param yaw angle in degrees
      */
     public void setYaw(double yaw) {
+        // System.out.println(yaw);
         pigeon.setYaw(yaw);
         setPreviousHeading(yaw);
     }
@@ -349,6 +351,7 @@ public class Drivetrain extends SubsystemBase {
      * Called every loop, feeds newest encoder readings to estimator
      */
     public void updatePose() {
+        // System.out.println(getRotation() + " " + getModulePositions());
         poseEstimator.update(getRotation(), getModulePositions());
     }
 
@@ -356,6 +359,7 @@ public class Drivetrain extends SubsystemBase {
      * @return the estimated pose aas a Pose2d
      */
     public Pose2d getPoseEstimatorPose2d() {
+        System.out.println(poseEstimator.getEstimatedPosition());
         return poseEstimator.getEstimatedPosition();
     }
 
