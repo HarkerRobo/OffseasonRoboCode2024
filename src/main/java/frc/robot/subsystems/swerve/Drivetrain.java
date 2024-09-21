@@ -102,13 +102,13 @@ public class Drivetrain extends SubsystemBase {
 
         // sets how much error to allow on theta controller
         omegaSpeakerController.setTolerance(RobotMap.Drivetrain.MAX_ERROR_SPEAKER);
-        omegaSpeakerController.enableContinuousInput(-Math.PI, Math.PI);
+        omegaSpeakerController.enableContinuousInput(-180, 180);
 
         vxAmpController.setTolerance(RobotMap.Drivetrain.MAX_ERROR_VX_AMP);
         vyAmpController.setTolerance(RobotMap.Drivetrain.MAX_ERROR_VY_AMP);
         omegaAmpController.setTolerance(RobotMap.Drivetrain.MAX_ERROR_AMP_DEG);
-        omegaAmpController.setSetpoint(Math.PI / 2.0);
-        omegaAmpController.enableContinuousInput(-Math.PI, Math.PI);
+        omegaAmpController.setSetpoint(90);
+        omegaAmpController.enableContinuousInput(-180, 180);
         // SmartDashboard.putData("Rotation PID", thetaController);
         // SmartDashboard.putNumber("kP", thetaController.getP());
         // SmartDashboard.putNumber("kI", thetaController.getI());
@@ -274,8 +274,7 @@ public class Drivetrain extends SubsystemBase {
         // Telemetry.putNumber("swerve", "Desired Omega", refAngleFieldRel.getRadians());
         // Telemetry.putNumber("swerve", "Current Omega", getPoseEstimatorPose2d().getRotation().getRadians());
         // return 0;
-        return omegaSpeakerController.calculate(getPoseEstimatorPose2d().getRotation().getRadians(),
-                Math.toRadians(degRefSpeaker));
+        return omegaSpeakerController.calculate(getPoseEstimatorPose2d().getRotation().getDegrees(), degRefSpeaker);
     }
 
     public double getRefAngleSpeaker() {

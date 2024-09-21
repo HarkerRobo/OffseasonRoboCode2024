@@ -108,15 +108,15 @@ public class RobotMap {
         // Pigeon ID
         public static final int PIGEON_ID = 1;
 
-        public static final double PIGEON_kP = 0.0001; // TODO
+        public static final double PIGEON_kP = 0.00012; // TODO
 
         public static final double MIN_OUTPUT = 0.05;
 
         // PID for omega (turning) control
-        public static final double OMEGA_kP = 2; // TODO
+        public static final double OMEGA_kP = 0.05; // TODO
         public static final double OMEGA_kI = 0.0;
-        public static final double OMEGA_kD = 0.1;
-        public static final double MAX_ERROR_SPEAKER = Math.toRadians(5);
+        public static final double OMEGA_kD = 0.0;
+        public static final double MAX_ERROR_SPEAKER = 5.0; // DEGREES
 
         public static final double VX_AMP_kP = 0.5;
         public static final double VY_AMP_kP = 0.5;
@@ -181,7 +181,7 @@ public class RobotMap {
         public static final double SHOOTER_CURRENT_LIMIT_TIME = 0.1;
         public static final int INDEXER_CURRENT_LIMIT = 80;
 
-        public static final double INDEXING_SPEED = 0.25;
+        public static final double INDEXING_SPEED = 0.2;
         public static final double SHOOTING_SPEED = 1.0;
 
         public static final double AUTON_REVVED_RPS = 370.0 / 60.0;
