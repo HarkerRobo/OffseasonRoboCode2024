@@ -436,8 +436,8 @@ public class Drivetrain extends SubsystemBase {
             Pose2d visionBot = Limelight.getBotPose2d();
             double x = Limelight.getDistanceToTag();
 
-            double stdX = .085 * x;
-            double stdTheta = .05 + .085 * x;
+            double stdX = .105 * x;
+            double stdTheta = .05 + .105 * x;
             if (Limelight.isPoseValid(visionBot)) {
                 poseEstimator.addVisionMeasurement(visionBot, Limelight.getTimestamp(), VecBuilder.fill(stdX, stdX, stdTheta));
             }

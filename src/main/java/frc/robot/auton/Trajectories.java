@@ -79,14 +79,14 @@ public class Trajectories {
          */
         public static Trajectory startToNote1_four = generateTrajectory(
                 List.of(new Pose2d(1.28, 5.41, Rotation2d.fromDegrees(180)),
-                        new Pose2d(2.45, 4.15, Rotation2d.fromDegrees(180))),
+                        new Pose2d(2.40, 4.15, Rotation2d.fromDegrees(180))),
                 4.0, 
                 2.5, 
                 0.0, 
                 0.0,
                 true);
         public static Trajectory note1ToShoot1_four = generateTrajectory(
-                List.of(new Pose2d(2.45, 4.15, Rotation2d.fromDegrees(180)),
+                List.of(new Pose2d(2.40, 4.15, Rotation2d.fromDegrees(180)),
                         new Pose2d(1.4, 5.3, Rotation2d.fromDegrees(180))),
                 5.0, 
                 4.0, 

@@ -95,7 +95,7 @@ public class RobotMap {
 
         // Translation FF Values
         public static final double TRANSLATION_kS = 0.13561; // TODO
-        public static final double TRANSLATION_kV = 2.1051; // TODO
+        public static final double TRANSLATION_kV = 1.9051; // TODO
         public static final double TRANSLATION_kA = 1.5737; // TODO
 
         // pid
@@ -151,7 +151,7 @@ public class RobotMap {
         public static double X_kI = 0.0;
         public static double X_kD = 0.0;
 
-        public static double Y_kP = 1.0; // TODO
+        public static double Y_kP = 0.85; // TODO
         public static double Y_kI = 0.0;
         public static double Y_kD = 0.0;
 
