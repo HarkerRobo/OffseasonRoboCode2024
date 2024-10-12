@@ -60,15 +60,15 @@ public class Pivot extends SubsystemBase {
 
         speakerAngles = new InterpolatingDoubleTreeMap();
         speakerAngles.put(0.0, 1.5);
-        speakerAngles.put(1.787, 22.1 - 3.0);
-        speakerAngles.put(2.043, 25.5 - 4.0);
-        speakerAngles.put(2.361, 30.0 - 5.0);
-        speakerAngles.put(2.839, 39.643 - 8.0);
-        speakerAngles.put(3.228, 42.574 - 8.0);
-        speakerAngles.put(3.713, 45.914 - 8.0);
-        speakerAngles.put(4.156, 46.5 - 8.0);
-        speakerAngles.put(4.507, 47.463 - 10.0);
-        speakerAngles.put(5.051, 48.990 - 10.0);
+        speakerAngles.put(1.787, 19.1);
+        speakerAngles.put(2.043, 21.5);
+        speakerAngles.put(2.361, 24.0);
+        speakerAngles.put(2.839, 30.643);
+        speakerAngles.put(3.228, 31.574);
+        speakerAngles.put(3.713, 34.914);
+        speakerAngles.put(4.156, 35.5);
+        speakerAngles.put(4.507, 36.463);
+        speakerAngles.put(5.051, 37.990 );
         configCANcoder();
         configMotors();
     }

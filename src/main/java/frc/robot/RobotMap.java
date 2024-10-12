@@ -137,7 +137,7 @@ public class RobotMap {
         public static final double ROBOT_WIDTH = Units.inchesToMeters(28.5);
 
         public static final double MAX_DRIVING_SPEED = 5.0; // m/s //TODO
-        public static final double EXTENDED_MAX_DRIVING_SPEED = 0.3;
+        public static final double EXTENDED_MAX_DRIVING_SPEED_MULTIPLIER = 0.3;
         public static final double MAX_ACCELERATION = 8.5;
         public static final double MAX_ANGLE_VELOCITY = Math.PI;
         public static final double EXTENDED_MAX_ANGLE_VELOCITY = Math.PI/10;
