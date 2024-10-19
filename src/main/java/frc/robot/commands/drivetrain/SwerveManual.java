@@ -68,14 +68,14 @@ public class SwerveManual extends Command {
             Drivetrain.getInstance().setPreviousHeading(Drivetrain.getInstance().getPoseEstimatorPose2d().getRotation().getDegrees());
         }
 
-        // aligns to amp
-        if (OI.getInstance().getDriver().getRightTrigger() > 0.5) {
-            vx = -Drivetrain.getInstance().alignToAmp()[0];
-            // vy = -Drivetrain.getInstance().alignToAmp()[1];
-            vy *= RobotMap.Drivetrain.EXTENDED_MAX_DRIVING_SPEED_MULTIPLIER;
-            omega = Drivetrain.getInstance().alignToAmp()[2];
-            Drivetrain.getInstance().setPreviousHeading(Drivetrain.getInstance().getPoseEstimatorPose2d().getRotation().getDegrees());
-        }
+        // aligns to amp -- doesn't work!
+        // if (OI.getInstance().getDriver().getRightTrigger() > 0.5) {
+        //     vx = -Drivetrain.getInstance().alignToAmp()[0];
+        //     // vy = -Drivetrain.getInstance().alignToAmp()[1];
+        //     vy *= RobotMap.Drivetrain.EXTENDED_MAX_DRIVING_SPEED_MULTIPLIER;
+        //     omega = Drivetrain.getInstance().alignToAmp()[2];
+        //     Drivetrain.getInstance().setPreviousHeading(Drivetrain.getInstance().getPoseEstimatorPose2d().getRotation().getDegrees());
+        // }
 
         // slow mode
         if (OI.getInstance().getDriver().getLeftTrigger() > 0.5) {

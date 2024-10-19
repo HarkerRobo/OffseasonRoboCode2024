@@ -79,6 +79,10 @@ public class Shooter extends SubsystemBase {
         return master.getRotorVelocity().getValue() >= RobotMap.Shooter.REVVED_AMP_RPS;
     }
 
+    public boolean isShooterFerryRevved() {
+        return master.getRotorVelocity().getValue() >= RobotMap.Shooter.REVVED_FERRY_RPS;
+    }
+
     public void setShooter(double power) {
         master.setVoltage(power * RobotMap.MAX_VOLTAGE);
     }

@@ -49,6 +49,7 @@ public class OI {
     private void initBindings() {
         driver.getLeftBumper().onTrue(CommandGroups.getFullIntakeCommand());
         driver.getRightBumper().onTrue(CommandGroups.getFullShootSpeaker());
+
         driver.getDownDPadButton().onTrue(CommandGroups.getFullZeroCommand());
         driver.getUpDPadButton().whileTrue(new OuttakeStuckNote());
 
@@ -60,9 +61,6 @@ public class OI {
         operator.getButtonY().onTrue(CommandGroups.getFullClimb());
         operator.getButtonA().whileTrue(new MoveToPosition(0));
         operator.getLeftBumper().onTrue(CommandGroups.getFullZeroCommand());
-        
-        driver.getRightDPadButton().onTrue(new PivotToAngle(Goal.SPEAKER));
-        driver.getLeftDPadButton().onTrue(new PivotToAngle(Goal.AMP));
         
         driver.getButtonStart().onTrue(new InstantCommand(() -> {
             Drivetrain.getInstance().toggleRobotCentric();
@@ -77,6 +75,9 @@ public class OI {
         // operator.getUpDPadButton().onTrue(CommandGroups.PRE_ALIGN_CLIMB);
         // operator.getDownDPadButton().onTrue(CommandGroups.POST_ALIGN_CLIMB);
         // operator.getRightDPadButton().onTrue(CommandGroups.FULL_SHOOT_TRAP);
+
+        // driver.getRightDPadButton().onTrue(new PivotToAngle(Goal.SPEAKER));
+        // driver.getLeftDPadButton().onTrue(new PivotToAngle(Goal.AMP));
 
         // driver.a().whileTrue(m_pivot.sysIdQuasistatic(SysIdRoutine.Direction.kForward));
         // driver.b().whileTrue(m_pivot.sysIdQuasistatic(SysIdRoutine.Direction.kReverse));

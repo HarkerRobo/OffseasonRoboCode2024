@@ -22,6 +22,9 @@ public class RevShooter extends Command {
             case SPEAKER:
                 Shooter.getInstance().setShooter(RobotMap.Shooter.SHOOTING_SPEED);
                 break;
+            case FERRY:
+                Shooter.getInstance().setShooter(RobotMap.Shooter.FERRY_SPEED);
+                break;
         }
     }
 
@@ -33,6 +36,8 @@ public class RevShooter extends Command {
                 if (DriverStation.isAutonomous())
                     return Shooter.getInstance().isAutonShooterSpeakerRevved();
                 return Shooter.getInstance().isShooterSpeakerRevved();
+            case FERRY:
+                return Shooter.getInstance().isShooterFerryRevved();
             default:
                 return false;
         }

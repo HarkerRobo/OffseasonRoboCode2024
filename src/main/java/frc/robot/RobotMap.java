@@ -137,10 +137,10 @@ public class RobotMap {
         public static final double ROBOT_WIDTH = Units.inchesToMeters(28.5);
 
         public static final double MAX_DRIVING_SPEED = 5.0; // m/s //TODO
-        public static final double EXTENDED_MAX_DRIVING_SPEED_MULTIPLIER = 0.3;
+        public static final double EXTENDED_MAX_DRIVING_SPEED_MULTIPLIER = 0.4;
         public static final double MAX_ACCELERATION = 8.5;
         public static final double MAX_ANGLE_VELOCITY = Math.PI;
-        public static final double EXTENDED_MAX_ANGLE_VELOCITY_MULTIPLIER = 0.1;
+        public static final double EXTENDED_MAX_ANGLE_VELOCITY_MULTIPLIER = 0.7;
         public static final double MAX_ANGLE_ACCELERATION = MAX_ANGLE_VELOCITY / 2.0;
 
         /**
@@ -178,14 +178,17 @@ public class RobotMap {
 
         public static final double INDEXING_SPEED = 0.2;
         public static final double SHOOTING_SPEED = 1.0;
+        public static final double FERRY_SPEED = 0.7;
 
         public static final double AUTON_REVVED_RPS = 370.0 / 60.0;
         public static final double REVVED_RPS = 1000.0 / 60.0;
         public static final double REVVED_AMP_RPS = 60.0 / 60.0;
+        public static final double REVVED_FERRY_RPS = 800.0/ 60.0;
 
         public static enum Goal {
             AMP,
-            SPEAKER
+            SPEAKER,
+            FERRY
         }
     }
 
@@ -215,6 +218,7 @@ public class RobotMap {
         public static final double CLIMB_ANGLE = 100;
         public static final double AMP_ANGLE = 80;
         public static final double QUICK_ANGLE = 30;
+        public static final double FERRY_ANGLE = 20;
 
         public static final double PIVOT_GEAR_RATIO = 37.5;
         
@@ -224,6 +228,7 @@ public class RobotMap {
         
         public static final double MAX_ERROR_SPEAKER = 1.5; // degrees
         public static final double MAX_ERROR_AMP = 2;
+        public static final double MAX_ERROR_FERRY = 5;
     
         public static final double PIVOT_FORWARD_SOFT_LIMIT = 65 / 67.76 * 37.5;
         public static final double PIVOT_REVERSE_SOFT_LIMIT = 0;
@@ -235,6 +240,7 @@ public class RobotMap {
             AMP,
             SPEAKER,
             CLIMB,
+            FERRY
         }
 
     }

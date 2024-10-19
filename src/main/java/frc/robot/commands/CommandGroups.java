@@ -62,7 +62,8 @@ public class CommandGroups {
         }
         
         public static Command getFullShootNoAlign() {
-                return new RevShooter(RobotMap.Shooter.Goal.AMP)
+                return new PivotToAngle(RobotMap.Pivot.Goal.FERRY)
+                .andThen(new RevShooter(RobotMap.Shooter.Goal.FERRY))
                 .andThen(new ShootAmpNote()).andThen(new ZeroPivot());
         }
         

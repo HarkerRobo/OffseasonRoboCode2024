@@ -33,6 +33,10 @@ public class PivotToAngle extends Command {
                 ref = RobotMap.Pivot.CLIMB_ANGLE;
                 Pivot.getInstance().moveToPosition(ref);
                 break;
+            case FERRY:
+                ref = RobotMap.Pivot.FERRY_ANGLE;
+                Pivot.getInstance().moveToPosition(ref);
+                break;
         }
 
     }
@@ -47,6 +51,9 @@ public class PivotToAngle extends Command {
             case SPEAKER:
                 error = RobotMap.Pivot.MAX_ERROR_SPEAKER;
                 return debouncer.calculate(MathUtil.compareSetpoint(Pivot.getInstance().getPosition(), ref, error));
+            case FERRY:
+                error = RobotMap.Pivot.MAX_ERROR_FERRY;
+                return MathUtil.compareSetpoint(Pivot.getInstance().getPosition(), ref, error);
             default:
                 error = RobotMap.Pivot.MAX_ERROR_AMP;
                 return MathUtil.compareSetpoint(Pivot.getInstance().getPosition(), ref, error);
