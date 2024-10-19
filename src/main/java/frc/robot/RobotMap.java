@@ -140,7 +140,7 @@ public class RobotMap {
         public static final double EXTENDED_MAX_DRIVING_SPEED_MULTIPLIER = 0.3;
         public static final double MAX_ACCELERATION = 8.5;
         public static final double MAX_ANGLE_VELOCITY = Math.PI;
-        public static final double EXTENDED_MAX_ANGLE_VELOCITY = Math.PI/10;
+        public static final double EXTENDED_MAX_ANGLE_VELOCITY_MULTIPLIER = 0.1;
         public static final double MAX_ANGLE_ACCELERATION = MAX_ANGLE_VELOCITY / 2.0;
 
         /**
@@ -158,11 +158,6 @@ public class RobotMap {
         public static double THETA_kP = 5.3; // TODO
         public static double THETA_kI = 0.0;
         public static double THETA_kD = 0.0;
-
-        // Speed multipliers
-        public static final double SPEED_MULTIPLIER = 1.0; // TODO
-        public static final double ROT_MULITPLIER = 1.0; // TODO
-        public static final double CLAMP_MULTIPLIER = 0.7;
     }
 
     public static final class Shooter {

@@ -55,6 +55,7 @@ public class OI {
         driver.getButtonA().onTrue(CommandGroups.getFullRetractClimb());
         driver.getButtonY().onTrue(CommandGroups.getFullClimb());
         driver.getButtonB().onTrue(CommandGroups.getFullShootAmp());
+        driver.getButtonX().onTrue(CommandGroups.getFullShootNoAlign());
 
         operator.getButtonY().onTrue(CommandGroups.getFullClimb());
         operator.getButtonA().whileTrue(new MoveToPosition(0));
@@ -62,12 +63,12 @@ public class OI {
         
         driver.getRightDPadButton().onTrue(new PivotToAngle(Goal.SPEAKER));
         driver.getLeftDPadButton().onTrue(new PivotToAngle(Goal.AMP));
+        
         driver.getButtonStart().onTrue(new InstantCommand(() -> {
             Drivetrain.getInstance().toggleRobotCentric();
         }));
-        
         // DURING TESTING: ALIGN ROBOT BOTTOM RIGHT CORNER WITH CORNER OF SUBWOOFER, WITH SHOOTER FACING SPEAKER
-        driver.getButtonX().onTrue(new InstantCommand( () -> Drivetrain.getInstance().setPose(new Pose2d(1.28, 5.41, Rotation2d.fromDegrees(180)))));
+        driver.getButtonSelect().onTrue(new InstantCommand( () -> Drivetrain.getInstance().setPose(new Pose2d(1.28, 5.41, Rotation2d.fromDegrees(180)))));
 
         //TESTING
         // driver.getButtonB().whileTrue(new InstantCommand(() -> Pivot.getInstance().setPercentOutput(0.1)));

@@ -61,6 +61,10 @@ public class CommandGroups {
                         new MotorOutputConfigs().withNeutralMode(NeutralModeValue.Brake))));
         }
         
+        public static Command getFullShootNoAlign() {
+                return new RevShooter(RobotMap.Shooter.Goal.AMP)
+                .andThen(new ShootAmpNote()).andThen(new ZeroPivot());
+        }
         
 //        public static final Command PRE_DRIVEFWD_CLIMB = new PivotToAngle(RobotMap.Pivot.Goal.TRAP1); // wait for drive forward
 //        public static final Command PRE_DRIVEBKWD_CLIMB = new PivotToAngle(RobotMap.Pivot.Goal.TRAP2).andThen(new MoveToPosition(RobotMap.Elevator.STAGE_HEIGHT).alongWith(new ZeroPivot())); // wait for drive backwards
