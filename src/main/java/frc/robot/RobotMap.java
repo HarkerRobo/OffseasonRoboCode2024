@@ -66,7 +66,7 @@ public class RobotMap {
         public static final int[] CAN_CODER_ID = {9, 10, 11, 12};
 
         // offsets of cancoders of each swerve module (in rotations)
-        public static final double[] CAN_CODER_OFFSETS = (FIRST_BOT) ? new double[]{-0.155518, 0.099609, -0.360596-0.299805, -0.402588-0.193848}
+        public static final double[] CAN_CODER_OFFSETS = (FIRST_BOT) ? new double[]{0.326172-0.5, 0.099609, -0.360596-0.299805, -0.402588-0.193848}
                                                                      : new double[]{-0.141357+0.5, -0.115479+0.5, 0.099609, -0.030518};
         // current limit constants for translation motors
         public static final double TRANS_CURRENT_LIMIT = 40;
@@ -178,7 +178,7 @@ public class RobotMap {
 
         public static final double INDEXING_SPEED = 0.2;
         public static final double SHOOTING_SPEED = 1.0;
-        public static final double FERRY_SPEED = 0.7;
+        public static final double FERRY_SPEED = 0.5;
 
         public static final double AUTON_REVVED_RPS = 370.0 / 60.0;
         public static final double REVVED_RPS = 1000.0 / 60.0;
@@ -254,7 +254,7 @@ public class RobotMap {
         public static final double ELEVATOR_kG = 0.01;
 
         public static final double TRAP_HEIGHT = 0; // motor rotations
-        public static final double STAGE_HEIGHT = 89;
+        public static final double STAGE_HEIGHT = 88;
 
         public static final double ELEVATOR_FORWARD_SOFT_LIMIT = 0;
         public static final double ELEVATOR_REVERSE_SOFT_LIMIT = 0;

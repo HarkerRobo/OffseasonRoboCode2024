@@ -47,7 +47,7 @@ public class Autons
     public static final SequentialCommandGroup oneNote = new SequentialCommandGroup(
         CommandGroups.getFullZeroCommand(),
         CommandGroups.getFullShootSpeaker(),
-        new WaitCommand(10),
+        new WaitCommand(8),
         new SwervePositionController(Trajectories.note1_one, () -> Rotation2d.fromDegrees(180), false)
     );
 
