@@ -53,7 +53,7 @@ public class RobotMap {
         public static final int[] TRANSLATION_IDS = {22, 5, 28, 10};
 
         // translation motors inverted
-        public static final InvertedValue[] TRANSLATION_INVERTS = (FIRST_BOT) ? new InvertedValue[]{InvertedValue.CounterClockwise_Positive, InvertedValue.Clockwise_Positive, InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive}
+        public static final InvertedValue[] TRANSLATION_INVERTS = (FIRST_BOT) ? new InvertedValue[]{InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive, InvertedValue.CounterClockwise_Positive}
                                                                               : new InvertedValue[]{InvertedValue.Clockwise_Positive, InvertedValue.Clockwise_Positive, InvertedValue.Clockwise_Positive, InvertedValue.Clockwise_Positive};
 
         // ids for rotation motors
@@ -66,7 +66,7 @@ public class RobotMap {
         public static final int[] CAN_CODER_ID = {9, 10, 11, 12};
 
         // offsets of cancoders of each swerve module (in rotations)
-        public static final double[] CAN_CODER_OFFSETS = (FIRST_BOT) ? new double[]{0.326172-0.5, 0.099609, -0.360596-0.299805, -0.402588-0.193848}
+        public static final double[] CAN_CODER_OFFSETS = (FIRST_BOT) ? new double[]{0.399414, -0.399170, 0.340820, 0.403320}
                                                                      : new double[]{-0.141357+0.5, -0.115479+0.5, 0.099609, -0.030518};
         // current limit constants for translation motors
         public static final double TRANS_CURRENT_LIMIT = 40;
